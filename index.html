@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" , maximum-scale="1.0" />
+  <link rel="icon" href="./assets/img/music-icon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link id="main-css" rel="stylesheet" href="./assets/css/main.css" />
+  <link id="light-css" rel="stylesheet" href="./assets/css/styles-light.css" disabled />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <!-- Please download FontAwesome 6.4.0 to use this Repeat-1 Pro icon!
+      Link Download FontAwesome 6.4.0 Pro: https://bom.so/mctmgr -->
+  <link rel="stylesheet" href="./assets/fonts/Font-Awesome-640/css/all.css" />
+  <title>Marvis Pro</title>
+</head>
+
+<body>
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+  <div class="music-player-container">
+    <div class="music-player-content">
+      <main>
+        <div class="music-player-sidebar">
+          <div class="category">
+            <h2>Thư viện</h2>
+            <ul>
+              <li>
+                <a class="link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M497 128.533H15c-8.284 0-15 6.716-15 15V497c0 8.284 6.716 15 15 15h482c8.284 0 15-6.716 15-15V143.533c0-8.284-6.716-15-15-15zM340.637 332.748l-120.5 80.334a15.001 15.001 0 0 1-23.32-12.481V239.934a15 15 0 0 1 23.32-12.481l120.5 80.334a14.998 14.998 0 0 1 0 24.961zm108.164-268.48h-385.6c-8.284 0-15 6.716-15 15s6.716 15 15 15h385.6c8.284 0 15-6.716 15-15s-6.716-15-15-15zM400.6 0H111.4c-8.284 0-15 6.716-15 15s6.716 15 15 15h289.2c8.284 0 15-6.716 15-15s-6.716-15-15-15z" />
+                  </svg>
+                  <p>Danh sách phát</p>
+                </a>
+              </li>
+              <li>
+                <a class="link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350">
+                    <path
+                      d="M175 171.173c38.914 0 70.463-38.318 70.463-85.586C245.463 38.318 235.105 0 175 0s-70.465 38.318-70.465 85.587c0 47.268 31.549 85.586 70.465 85.586zM41.909 301.853c-.012-2.882-.024-.812 0 0zm266.176 2.251c.038-.789.013-5.474 0 0z" />
+                    <path
+                      d="M307.935 298.397c-1.305-82.342-12.059-105.805-94.352-120.657 0 0-11.584 14.761-38.584 14.761s-38.586-14.761-38.586-14.761C55.018 192.43 43.61 215.545 42.11 295.722c-.123 6.547-.18 6.891-.202 6.131.005 1.424.011 4.058.011 8.651 0 0 19.592 39.496 133.08 39.496 113.486 0 133.08-39.496 133.08-39.496 0-2.951.002-5.003.005-6.399-.022.47-.066-.441-.149-5.708z" />
+                  </svg>
+                  <p>Nghệ sĩ</p>
+                </a>
+              </li>
+              <li>
+                <a class="link" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      d="M490.667 0H21.333C9.536 0 0 9.557 0 21.333v341.333C0 374.443 9.536 384 21.333 384h469.333c11.797 0 21.333-9.557 21.333-21.333V21.333C512 9.557 502.464 0 490.667 0zm-21.334 405.333H42.667c-11.797 0-21.333 9.557-21.333 21.333S30.869 448 42.667 448h426.667c11.797 0 21.333-9.557 21.333-21.333s-9.536-21.334-21.334-21.334zm-42.666 64H85.333C73.536 469.333 64 478.89 64 490.666S73.536 512 85.333 512h341.333c11.797 0 21.333-9.557 21.333-21.333s-9.535-21.334-21.332-21.334z" />
+                  </svg>
+                  <p>Albums</p>
+                </a>
+              </li>
+              <li>
+                <a class="link active" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329.707 329.707">
+                    <path
+                      d="M31.398 156.999h94.204v-31.392H31.398c-8.668 0-15.701 7.025-15.701 15.693 0 8.666 7.033 15.699 15.701 15.699zm0-62.794h94.204v-.008l134.56-31.394H31.398c-8.668 0-15.701 7.027-15.701 15.693v.008c0 8.665 7.033 15.701 15.701 15.701zm0-62.803h235.513c8.659 0 15.696-7.035 15.696-15.701C282.607 7.025 275.57 0 266.911 0H31.398C22.73 0 15.697 7.025 15.697 15.701c0 8.666 7.033 15.701 15.701 15.701zm0 188.409h94.204v-31.41H31.398c-8.668 0-15.701 7.029-15.701 15.701v.008c0 8.664 7.033 15.701 15.701 15.701zM283.217 100.36l-95.425 19.081c-17.004 3.4-30.789 20.218-30.789 37.558v94.996a39.863 39.863 0 0 0-7.851-.789c-21.684 0-39.251 17.576-39.251 39.248 0 21.685 17.567 39.253 39.251 39.253 21.681 0 39.253-17.568 39.253-39.253 0-1.999-.301-3.915-.589-5.83l.589-.116v-109.56l94.202-17.949v63.594a40.137 40.137 0 0 0-7.851-.789c-21.68 0-39.248 17.576-39.248 39.253 0 21.68 17.568 39.249 39.248 39.249 21.1 0 38.179-16.68 39.085-37.566l.168-.027V125.606c.001-17.35-13.788-28.647-30.792-25.246zM15.697 266.907c0 8.668 7.033 15.697 15.701 15.697h47.566c1.28-11.529 5.304-22.222 11.453-31.398H31.398c-8.668 0-15.701 7.029-15.701 15.701z" />
+                  </svg>
+                  <p>Bài hát</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="now-playing">
+            <div class="now-playing-title">
+              <div class="now-playing-title-h2">
+                <h2>Đang phát</h2>
+              </div>
+              <div class="now-playing-title-i">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+            <div class="album-cover">
+              <div class="waves">
+                <span class="wave"></span>
+                <span class="wave"></span>
+                <span class="wave"></span>
+                <span class="wave"></span>
+                <span class="wave"></span>
+                <span class="wave"></span>
+                <span class="wave"></span>
+              </div>
+              <img class="img-responsive"
+                src="https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_webp/cover/5/9/4/6/5946573f782f09398868dca855f3f6ab.jpg" />
+              <div class="overlay"></div>
+            </div>
+          </div>
+        </div>
+        <div class="music-player-main">
+          <div class="current-select-category-container">
+            <div class="current-select-category-info">
+              <div class="selected-type">
+                <input type="checkbox" id="toggle" class="toggle-checkbox" />
+                <label for="toggle" class="toggle-container">
+                  <div><i class="fa-solid fa-moon"></i> Tím</div>
+                  <div><i class="fa-regular fa-sun"></i> Đen</div>
+                </label>
+              </div>
+              <div class="poster-box playing">
+                <div class="front" style="
+											background-image: url('https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_webp/cover/5/9/4/6/5946573f782f09398868dca855f3f6ab.jpg');
+										">
+                  <div class="album-overlay">
+                    <div class="play-button">
+                      <i class="fa-solid fa-pause icon-pause"></i>
+                      <i class="fa-duotone fa-play icon-play"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="poster-info">
+                <div class="poster-main-info">
+                  <h2>Nha Trang Ngày Về</h2>
+                  <p>Lý Thu Thảo</p>
+                </div>
+                <div class="poster-main-play-all">
+                  <i class="fa-solid fa-pause icon-pause"></i>
+                  <i class="fa-solid fa-play icon-play"></i>
+                  <span>Phát tất cả</span>
+                </div>
+              </div>
+            </div>
+            <div class="current-select-category-content">
+              <!-- Tab items -->
+              <div class="tabs">
+                <div class="tab tab-item active" data-tab="tab1">
+                  Tiếp Theo
+                </div>
+                <div class="tab tab-item" data-tab="tab2">
+                  Lời Bài Hát
+                </div>
+                <div class="tab tab-item" data-tab="tab3">
+                  Liên Quan
+                </div>
+                <div class="line"></div>
+              </div>
+
+              <!-- Tab content -->
+              <div class="tab-content">
+                <div class="tab-pane active" data-pane="tab1">
+                  <div class="song-list">
+                    <div class="song-list-item active">
+                      <div class="thumbnail"
+                        style="background-image: url('https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_webp/cover/5/9/4/6/5946573f782f09398868dca855f3f6ab.jpg');">
+                        <div class="thumbnail-overlay">
+                          <div class="play-button">
+                            <i class="fa-solid fa-pause icon-pause"></i>
+                            <i class="fa-duotone fa-play icon-play"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="song-info">
+                        <div class="song-name">
+                          <h3>Nha Trang Ngày Về</h3>
+                          <p>Lý Thu Thảo</p>
+                        </div>
+                        <div class="album-name">
+                          <a href="">
+                            <h3>Mùa Đông Tuyết Trắng</h3>
+                          </a>
+                        </div>
+                        <div class="song-duration">
+                          <span>04:22</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane lyrics-tab" data-pane="tab2">
+                <h2>Kẻ Viết Ngôn Tình</h2>
+                <p>Người ơi em hãy quên đi</p>
+              </div>
+              <div class="tab-pane related-tab" data-pane="tab3">
+                <div class="song-list">
+                  <div class="song-list-item">
+                    <div class="thumbnail"></div>
+                    <div class="song-info">
+                      <div class="song-name">
+                        <h3>Đoản Khúc Cuối Cho Em</h3>
+                        <p>Lý Thu Thảo</p>
+                      </div>
+                      <div class="song-duration">
+                        <span>04:42</span>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- Songlist -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="music-player">
+        <div class="timer-container">
+          <div class="song-timer">
+            <span class="current-time">00:00</span>
+            <span class="max-duration">00:00</span>
+          </div>
+          <div class="progress-area">
+            <div class="progress-bar">
+              <div class="progress-time">03:45</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="current-playing-song-controls">
+          <div class="song-name now-playing-song-info">
+            <h4>Cho Tôi Làm Lại Từ Đầu</h4>
+            <p><strong>Lý Thu Thảo</strong></p>
+          </div>
+
+          <div class="controls">
+            <div class="shuffle-button">
+              <span class="shuffle-info">Bật phát ngẫu nhiên</span>
+              <i class="fa-solid fa-shuffle"></i>
+            </div>
+            <div class="backward-button">
+              <span class="backward-info">Phát trước đó</span>
+              <i class="fa-solid fa-backward-step"></i>
+            </div>
+            <div class="play-button">
+              <i class="fa-solid fa-pause icon-pause"></i>
+              <i class="fa-duotone fa-play icon-play"></i>
+            </div>
+            <div class="forward-button">
+              <span class="forward-info">Phát tiếp theo</span>
+              <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div class="repeat-button">
+              <span class="repeat-info">Bật phát lại tất cả</span>
+              <i class="fa-solid fa-repeat no-repeat"></i>
+              <i class="fa-solid fa-repeat all-repeat"></i>
+              <i class="fa-solid fa-repeat-1 one-repeat"></i>
+            </div>
+          </div>
+          <audio id="audio" type="audio/mpeg" src="">Your browser does not support the audio element.</audio>
+          <div class="volume-controls">
+            <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+            <!-- <i class="fa-solid fa-volume-off"></i> -->
+            <i class="fa-solid fa-volume-low"></i>
+            <!-- <i class="fa-solid fa-volume-high"></i> -->
+            <div class="volume"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./assets/js/app.js"></script>
+    <script type="module" src="./assets/js/interface.js"></script>
+</body>
+
+</html>
