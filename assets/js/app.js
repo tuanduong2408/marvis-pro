@@ -450,11 +450,18 @@ const app = {
 		const musicDuration = $('.max-duration');
 
 		// Cập nhật thanh progress-bar theo thời gian hiện tại của bài hát
-		audio.addEventListener('timeupdate', (e) => {
-			const currentTime = e.target.currentTime;
-			const duration = e.target.duration;
+		let currentProgressPercent = 0.0; // Lưu trữ giá trị phần trăm progress hiện tại
+
+		setInterval(() => {
+			const currentTime = audio.currentTime;
+			const duration = audio.duration;
 			const progressPercent = (currentTime / duration) * 100;
-			progressBar.style.width = `${progressPercent}%`;
+
+			// Chỉ cập nhật giá trị progress khi có sự thay đổi đáng kể
+			if (Math.abs(progressPercent - currentProgressPercent) >= 0.00001) {
+				currentProgressPercent = progressPercent;
+				progressBar.style.width = `${progressPercent}%`;
+			}
 
 			// Cập nhật thời gian hiện tại của bài hát
 			let currentMin = Math.floor(currentTime / 60);
@@ -465,9 +472,9 @@ const app = {
 			if (currentSec < 10) {
 				currentSec = `0${currentSec}`;
 			}
-			// musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
 			progressTime.innerText = `${currentMin}:${currentSec}`;
-		});
+		}, 10);
+
 
 		// Cập nhật tổng thời lượng bài hát khi metadata được tải về
 		audio.addEventListener('loadedmetadata', (e) => {
