@@ -1179,7 +1179,7 @@ button {
 	border-bottom-left-radius: var(--border-app-radius);
 	border-bottom-right-radius: var(--border-app-radius);
 	position: relative;
-	height: 79px;
+	height: 80px;
 	width: 100%;
 	flex-shrink: 0;
 	background: var(--music-player-color);
