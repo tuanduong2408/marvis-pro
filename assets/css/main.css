@@ -1221,6 +1221,7 @@ button {
 	border-radius: 2px;
 	box-shadow: #130c1c;
 	cursor: pointer;
+	transition: all 0.4s ease;
 }
 
 .timer-container {
@@ -1229,7 +1230,7 @@ button {
 	flex-direction: column;
 	align-items: center;
 	margin-top: -2px;
-	transition: all 0.3s ease;
+	transition: all 3s ease;
 	position: relative;
 }
 
@@ -1267,6 +1268,7 @@ button {
 	width: 0%;
 	border-radius: 2px;
 	background-color: var(--media-player-main-color);
+	transition: width 0.4s linear;
 }
 
 .progress-area.area-play {
@@ -1276,7 +1278,6 @@ button {
 	cursor: pointer;
 	margin: 5px;
 	border-radius: 3px;
-	transition: all 0.3s ease;
 }
 
 .progress-area::after {
