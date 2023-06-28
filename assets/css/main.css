@@ -631,7 +631,7 @@ button {
 .tab-content::-webkit-scrollbar,
 .info-tab::-webkit-scrollbar,
 .lyrics-tab::-webkit-scrollbar {
-	width: 7px;
+	width: 6px;
 	background-color: transparent;
 }
 
@@ -909,6 +909,17 @@ button {
 	border-bottom: 1px solid var(--song-list-item-active-color);
 }
 
+.song-list .song-list-item.active::after {
+	content: '';
+	width: 3px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-49.5%);
+	background: var(--media-player-main-color);
+	height: var(--song-list-item-height);
+}
+
 .song-list .song-list-item.active-1 {
 	background: var(--song-list-item-active-1-color);
 	cursor: pointer;
@@ -926,16 +937,6 @@ button {
 	background: var(--song-list-item-active-1-color);
 }
 
-.song-list-item.active::after {
-	content: '';
-	width: 3px;
-	position: absolute;
-	left: 0px;
-	top: 50%;
-	transform: translateY(-49.5%);
-	background: var(--media-player-main-color);
-	height: var(--song-list-item-height);
-}
 
 .album-name {
 	display: none;
@@ -1092,7 +1093,7 @@ button {
 }
 
 .music-player-main-album::-webkit-scrollbar {
-	width: 7px;
+	width: 6px;
 	background-color: transparent;
 }
 
