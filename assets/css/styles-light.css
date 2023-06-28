@@ -11,10 +11,6 @@
   --shuffle-repeat-info-bg-color: #33475B;
 }
 
-* {
-  color: #fff;
-}
-
 body {
   background-color: var(--body-background-color);
 }
@@ -62,4 +58,8 @@ body {
 
 .poster-main-play-all:hover {
 	background-color: #9b4de0bb;
+}
+
+.song-list-item .song-info {
+  color: #fff;
 }
