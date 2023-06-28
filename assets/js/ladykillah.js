@@ -116,4 +116,13 @@ export const ladyKillah = [
 		albumCover: 'https://i1.sndcdn.com/artworks-000124316727-v2z082-t500x500.jpg',
 		lyrics: '',
 	},
+	{
+		name: 'mệt',
+		singer: 'Diby',
+		album: 'LadyKillah',
+		path: 'music/lady-killah/met-diby.mp3',
+		images: '',
+		albumCover: 'https://i1.sndcdn.com/artworks-000124316727-v2z082-t500x500.jpg',
+		lyrics: '',
+	},
 ];
