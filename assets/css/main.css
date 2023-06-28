@@ -40,8 +40,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--media-player-main-color);
-  color: white;
+	background-color: var(--media-player-main-color);
+	color: white;
 }
 
 /* _______________________________________MUSIC PLAYER CONTAINER__________________________________________ */
@@ -148,7 +148,7 @@ body {
 }
 
 .category ul li a.active::before {
-	content: "";
+	content: '';
 	position: absolute;
 	height: 99%;
 	width: 3px;
@@ -193,10 +193,9 @@ body {
 }
 
 mark {
-  background-color: var(--media-player-main-color);
-  color: #fff;
+	background-color: var(--media-player-main-color);
+	color: #fff;
 }
-
 
 #search-form .search-info {
 	font-size: 13px;
@@ -258,7 +257,7 @@ button {
 
 .music-player-sidebar h2 {
 	color: #e0e0e0;
-	margin: 11px 0 22px;
+	margin: 11px 0 22px 2px;
 	font-size: 22px;
 	position: relative;
 }
@@ -937,7 +936,6 @@ button {
 	background: var(--song-list-item-active-1-color);
 }
 
-
 .album-name {
 	display: none;
 	color: #ffffff80;
@@ -993,23 +991,22 @@ button {
 }
 
 .music-player-main-playlist::-webkit-scrollbar {
-  width: 6px;
-  background-color: transparent;
-  position: relative;
+	width: 6px;
+	background-color: transparent;
+	position: relative;
 }
 
 .music-player-main-playlist::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background-color: #bebebe49;
-  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+	border-radius: 100px;
+	background-color: #bebebe49;
+	box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
 }
 
 .music-player-main-playlist::-webkit-scrollbar-track {
-  background-color: #53585c59;
-  border-radius: 100px;
-  width: 100%;
+	background-color: #53585c59;
+	border-radius: 100px;
+	width: 100%;
 }
-
 
 .playlists {
 	display: none;
@@ -1250,7 +1247,7 @@ button {
 	text-align: center;
 	position: absolute;
 	left: calc(100% - 7px);
-	top: -3.90px;
+	top: -3.9px;
 	width: 13px;
 	height: 13px;
 	background-color: #ffffff;
@@ -1285,11 +1282,10 @@ button {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 61.5%;
-	height: 40px;
-	width: 100%;
+	height: 34px;
+	width: 105%;
 	right: -5px;
-	top: -17px;
+	top: -19px;
 	padding-bottom: 3px;
 	z-index: 5;
 	cursor: pointer;
