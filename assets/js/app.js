@@ -126,6 +126,11 @@ const app = {
 	handleEvent: function () {
 		const _this = this;
 
+		// XỬ LÝ CLICK VÀO LOGO MARVIS PRO QUAY VỀ TRANG CHỦ
+		$('.homePage').addEventListener('click', function () {
+			window.location.href = 'https://tuanduong2408.github.io/marvis-pro/';
+		});
+
 		// XỬ LÝ NHẤN ENTER / SPACE ĐỂ PLAY / PAUSE BÀI HÁT
 		// NHẤN UP / DOWN ĐỂ CHỌN BÀI HÁT, NHẤN ENTER ĐỂ PLAY / PAUSE BÀI HÁT
 		let isFirstEnterPress = true;
@@ -274,6 +279,8 @@ const app = {
 				if (currentSongIndex === lastSongIndex) {
 					// Nếu đang phát bài cuối danh sách, dừng lại
 					audio.pause();
+					_this.isPlaying = false;
+					_this.updatePosterMainPlayAllStatus();
 				} else {
 					// Nếu không phải bài cuối danh sách, chuyển đến bài tiếp theo và phát
 					nextBtn.click();
@@ -451,7 +458,6 @@ const app = {
 
 		// Cập nhật thanh progress-bar theo thời gian hiện tại của bài hát
 		let currentProgressPercent = 0.0; // Lưu trữ giá trị phần trăm progress hiện tại
-
 		setInterval(() => {
 			const currentTime = audio.currentTime;
 			const duration = audio.duration;
@@ -474,7 +480,6 @@ const app = {
 			}
 			progressTime.innerText = `${currentMin}:${currentSec}`;
 		}, 10);
-
 
 		// Cập nhật tổng thời lượng bài hát khi metadata được tải về
 		audio.addEventListener('loadedmetadata', (e) => {
@@ -604,7 +609,7 @@ const app = {
 			musicPlayerMainPlaylist.classList.remove('show');
 			musicPlayerMainAlbum.classList.remove('show');
 			albumContainer.classList.remove('active');
-			
+
 			_this.songs = allSongsFromPlaylist;
 			_this.currentIndex = 0;
 			_this.loadAlbumSong();
