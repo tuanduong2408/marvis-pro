@@ -126,6 +126,16 @@ const app = {
 	handleEvent: function () {
 		const _this = this;
 
+		// XỬ LÝ LOẠI BỎ DẤU # TRÊN THANH ĐỊA CHỈ KHI CLICK CATEGORY
+		document.addEventListener('DOMContentLoaded', function () {
+			$$("a[href='#']").forEach(function (link) {
+				link.addEventListener('click', function (event) {
+					event.preventDefault();
+				});
+			});
+		});
+
+
 		// XỬ LÝ CLICK VÀO LOGO MARVIS PRO QUAY VỀ TRANG CHỦ
 		$('.homePage').addEventListener('click', function () {
 			window.location.href = 'https://tuanduong2408.github.io/marvis-pro/';
