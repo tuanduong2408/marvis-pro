@@ -281,13 +281,44 @@ button {
 	width: 100%;
 	margin-top: auto;
 	padding: 20px;
-	/* top: 258px; */
 	top: -7px;
 	left: 0px;
 	z-index: 100;
 	transition: transform var(--time-of-animation) ease;
 	cursor: pointer;
 	will-change: transition;
+}
+
+.now-playing .now-playing-info {
+	font-size: 14px;
+	background-color: #474d6842;
+	padding: 5px 10px;
+	border-radius: 100px;
+	position: relative;
+	top: 42px;
+	opacity: 0;
+}
+
+.now-playing .now-playing-info::before {
+	content: '';
+	position: absolute;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #474d6842;
+	top: 100%;
+	left: 67%;
+	transform: translateX(-50%);
+}
+
+.now-playing:hover .now-playing-title .now-playing-title-h2 {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.now-playing:hover .now-playing-info {
+	opacity: 1;
+	top: 32px;
+	transition: all 0.2s ease-in;
 }
 
 .now-playing-title {
