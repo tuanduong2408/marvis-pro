@@ -37,7 +37,6 @@ const posterMainPlayAll = $('.poster-main-play-all');
 const allSongsFromPlaylist = ngocDieu.concat(hoangNganAnh, ngoLanHuong, lilShady, tLong, baoAnh, vanMaiHuong, ladyKillah, lyThuThao, remix, hienNgan, vPop);
 
 let songListItems = [];
-let nextBtnCLick = true;
 
 const app = {
 	currentIndex: 0,
@@ -340,7 +339,6 @@ const app = {
 		// XỬ LÝ KHI CLICK NÚT NEXT
 		const nextBtn = $('.controls .forward-button');
 		nextBtn.onclick = function () {
-			nextBtnCLick = true;
 			_this.nextSong();
 			// Xóa lớp 'active' khỏi tất cả các phần tử trong danh sách
 			const songListItems = $$('.song-list-item');
