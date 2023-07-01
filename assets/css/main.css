@@ -82,7 +82,7 @@ body {
 .category {
 	position: relative;
 	font-weight: 600;
-	padding: 6px 0px 20px 20px;
+	padding: 17px 0px 20px 20px;
 	display: block;
 	transform: translateX(0px);
 	opacity: 1;
@@ -264,7 +264,7 @@ mark {
 	position: relative;
 	width: 100%;
 	margin-top: auto;
-	padding: 0px 20px 20px 20px;
+	padding: 0px 20px 26px 20px;
 	top: -6px;
 	left: 0px;
 	transition: transform var(--time-of-animation) ease;
@@ -275,7 +275,7 @@ mark {
 .now-playing .now-playing-info {
 	font-size: 14px;
 	background-color: #474d6842;
-	padding: 5px 10px;
+	padding: 4px 10px;
 	border-radius: 100px;
 	position: relative;
 	top: 26px;
@@ -323,7 +323,7 @@ mark {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: -5px;
+	margin-bottom: -10px;
 }
 
 .album-cover::after {
