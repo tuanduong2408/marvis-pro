@@ -626,49 +626,32 @@ const app = {
 			_this.render();
 			_this.songListItemClickHandle();
 
-			// Kiểm tra xem danh sách bài hát hiện tại có bất kỳ phần tử nào hay không
-			if (allSongsFromPlaylist.length > 0) {
-				const currentActiveIndex = _this.songs.findIndex((song) => song.name === currentSongName);
+			// Tìm vị trí của bài hát đang phát trong allSongsFromPlaylist
+			const currentActiveIndex = allSongsFromPlaylist.findIndex((song) => song.name === currentSongName);
 
-				if (currentActiveIndex !== -1) {
-					_this.currentIndex = currentActiveIndex;
-					_this.loadAlbumSong();
-
-					const songListItems = $$('.song-list-item');
-					songListItems.forEach((songListItem) => {
-						songListItem.classList.remove('active');
-						songListItem.classList.remove('active-1');
-					});
-
-					songListItems[currentActiveIndex].classList.add('active');
-					songListItems[currentActiveIndex].classList.add('active-1');
-
-					const thumbnailOverlay = songListItems[currentActiveIndex].querySelector('.thumbnail-overlay');
-					if (songListItems[currentActiveIndex].classList.contains('active')) {
-						thumbnailOverlay.classList.add('visible');
-						_this.updatePlayPauseIconsForAll();
-					}
-				} else {
-					// Nếu bài hát đang phát không có trong danh sách bài hát hiện tại
-					// Đặt active cho bài hát đầu tiên trong danh sách
-					_this.currentIndex = 0;
-					const songListItems = $$('.song-list-item');
-
-					songListItems.forEach((songListItem) => {
-						songListItem.classList.remove('active');
-						songListItem.classList.remove('active-1');
-					});
-
-					songListItems[_this.currentIndex].classList.add('active');
-					songListItems[_this.currentIndex].classList.add('active-1');
-
-					const thumbnailOverlay = songListItems[_this.currentIndex].querySelector('.thumbnail-overlay');
-					if (songListItems[_this.currentIndex].classList.contains('active')) {
-						thumbnailOverlay.classList.add('visible');
-						_this.updatePlayPauseIconsForAll();
-					}
+			if (currentActiveIndex !== -1) {
+				_this.currentIndex = currentActiveIndex;
+				_this.loadAlbumSong();
+				const songListItems = $$('.song-list-item');
+				songListItems.forEach((songListItem) => {
+					songListItem.classList.remove('active');
+					songListItem.classList.remove('active-1');
+				});
+				songListItems[currentActiveIndex].classList.add('active');
+				songListItems[currentActiveIndex].classList.add('active-1');
+				const thumbnailOverlay = songListItems[currentActiveIndex].querySelector('.thumbnail-overlay');
+				if (songListItems[currentActiveIndex].classList.contains('active')) {
+					thumbnailOverlay.classList.add('visible');
+					_this.updatePlayPauseIconsForAll();
+				}
+			} else {
+				_this.currentIndex = -1;
+				const songListItems = $$('.song-list-item');
+				if (songListItems.length > 0) {
+					songListItems[0].classList.add('active-1');
 				}
 			}
+
 			_this.isFirstTimePlayAlbum = true;
 			nowPlayingSection.click();
 		};
@@ -755,14 +738,14 @@ const app = {
 					_this.songs = sortedSongs;
 					_this.render();
 					_this.loadAlbumSong();
-					_this.currentIndex = -1;
-
 					currentActiveIndex = sortedSongs.findIndex(() => {
 						const customNameObj = customPlaylistNames.find((item) => item.playlistName === playlist.name);
 						const customName = customNameObj ? customNameObj.customName : playlist.name;
 						const songName = customName || playlist.name;
 						return songName === _this.currentSong?.name;
 					});
+					_this.currentIndex = currentActiveIndex;
+
 
 					_this.songListItemClickHandle();
 					backPlaylistBtn.classList.add('active');
