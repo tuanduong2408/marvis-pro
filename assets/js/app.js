@@ -37,6 +37,7 @@ const posterMainPlayAll = $('.poster-main-play-all');
 const allSongsFromPlaylist = ngocDieu.concat(hoangNganAnh, ngoLanHuong, lilShady, tLong, baoAnh, vanMaiHuong, ladyKillah, lyThuThao, remix, hienNgan, vPop);
 
 let songListItems = [];
+let nextBtnCLick = true;
 
 const app = {
 	currentIndex: 0,
@@ -134,7 +135,6 @@ const app = {
 				});
 			});
 		});
-
 
 		// XỬ LÝ CLICK VÀO LOGO MARVIS PRO QUAY VỀ TRANG CHỦ
 		$('.homePage').addEventListener('click', function () {
@@ -340,6 +340,7 @@ const app = {
 		// XỬ LÝ KHI CLICK NÚT NEXT
 		const nextBtn = $('.controls .forward-button');
 		nextBtn.onclick = function () {
+			nextBtnCLick = true;
 			_this.nextSong();
 			// Xóa lớp 'active' khỏi tất cả các phần tử trong danh sách
 			const songListItems = $$('.song-list-item');
@@ -603,7 +604,6 @@ const app = {
 				_this.renderAlbumSongs = false; // Đánh dấu rằng chưa render danh sách bài hát từ album
 				_this.isFirstPlayAlbumsClick = true;
 				albumOverlayControls.classList.remove('playing');
-				_this.currentIndex = -1;
 			});
 		});
 
@@ -612,7 +612,6 @@ const app = {
 		categorySongs.onclick = function () {
 			shuffleButton.classList.remove('active');
 			_this.isShuffle = false;
-			_this.render();
 			shuffleInfo.innerText = 'Shuffle On';
 			playlists.classList.remove('active');
 			musicPlayerMain.classList.remove('hidden');
@@ -620,19 +619,60 @@ const app = {
 			musicPlayerMainAlbum.classList.remove('show');
 			albumContainer.classList.remove('active');
 
-			_this.songs = allSongsFromPlaylist;
+			// Lưu lại tên bài hát đang phát
+			const currentSongName = _this.currentSong ? _this.currentSong.name : '';
+
 			_this.currentIndex = 0;
+			_this.songs = allSongsFromPlaylist;
 			_this.loadAlbumSong();
 			_this.render();
 			_this.songListItemClickHandle();
-			// Kiểm tra xem danh sách .song-list-item có tồn tại hay không trước khi thêm lớp active-1
-			const songListItems = $$('.song-list-item');
-			if (songListItems.length > 0) {
-				songListItems[0].classList.add('active-1');
-				_this.updatePosterMainPlayAllStatus();
-				songListItems[0].scrollIntoView({behavior: 'smooth', block: 'start'});
+
+			// Kiểm tra xem danh sách bài hát hiện tại có bất kỳ phần tử nào hay không
+			if (allSongsFromPlaylist.length > 0) {
+				const currentActiveIndex = _this.songs.findIndex((song) => song.name === currentSongName);
+
+				if (currentActiveIndex !== -1) {
+					_this.currentIndex = currentActiveIndex;
+					_this.loadAlbumSong();
+
+					const songListItems = $$('.song-list-item');
+					songListItems.forEach((songListItem) => {
+						songListItem.classList.remove('active');
+						songListItem.classList.remove('active-1');
+					});
+
+					songListItems[currentActiveIndex].classList.add('active');
+					songListItems[currentActiveIndex].classList.add('active-1');
+
+					const thumbnailOverlay = songListItems[currentActiveIndex].querySelector('.thumbnail-overlay');
+					if (songListItems[currentActiveIndex].classList.contains('active')) {
+						thumbnailOverlay.classList.add('visible');
+						_this.updatePlayPauseIconsForAll();
+					}
+				} else {
+					// Nếu bài hát đang phát không có trong danh sách bài hát hiện tại
+					// Đặt active cho bài hát đầu tiên trong danh sách
+					_this.currentIndex = 0;
+					const songListItems = $$('.song-list-item');
+
+					songListItems.forEach((songListItem) => {
+						songListItem.classList.remove('active');
+						songListItem.classList.remove('active-1');
+					});
+
+					songListItems[_this.currentIndex].classList.add('active');
+					songListItems[_this.currentIndex].classList.add('active-1');
+
+					const thumbnailOverlay = songListItems[_this.currentIndex].querySelector('.thumbnail-overlay');
+					if (songListItems[_this.currentIndex].classList.contains('active')) {
+						thumbnailOverlay.classList.add('visible');
+						_this.updatePlayPauseIconsForAll();
+					}
+				}
 			}
 			_this.isFirstTimePlayAlbum = true;
+			nowPlayingSection.click();
 		};
 
 		// XỬ LÝ KHI CLICK VÀO CATEGORY-PLAYLIST
@@ -703,31 +743,42 @@ const app = {
 					</div>
 				`;
 
+				// XỬ LÝ KHI CLICK VÀO TỪNG PHẦN TỬ PLAYLIST
+				let currentActiveIndex = -1;
 				playlistElement.addEventListener('click', function () {
 					shuffleButton.classList.remove('active');
 					_this.isShuffle = false;
 					categorySongs.click();
+					_this.currentIndex = 0;
 
-					// Sắp xếp danh sách bài hát trong playlist theo thứ tự Alphabetic B
 					const sortedSongs = playlist.songs.slice().sort((a, b) => {
 						return a.name.localeCompare(b.name);
 					});
-
-					_this.songs = sortedSongs; // Cập nhật danh sách bài hát của playlist vào _this.songs
-					_this.render(); // Render lại danh sách bài hát
+					_this.songs = sortedSongs;
+					_this.render();
 					_this.loadAlbumSong();
 					_this.currentIndex = -1;
+
+					currentActiveIndex = sortedSongs.findIndex(() => {
+						const customNameObj = customPlaylistNames.find((item) => item.playlistName === playlist.name);
+						const customName = customNameObj ? customNameObj.customName : playlist.name;
+						const songName = customName || playlist.name;
+						return songName === _this.currentSong?.name;
+					});
+
 					_this.songListItemClickHandle();
 					backPlaylistBtn.classList.add('active');
-					selectedPlaylistCount = playlist.songs.length; // Cập nhật số lượng playlist đã chọn
-					categoryPlaylistCountElement.textContent = `Playlist (${selectedPlaylistCount})`; // Hiển thị số lượng playlist đã chọn
-					// Kiểm tra xem danh sách .song-list-item có tồn tại hay không trước khi thêm lớp active-1
+					selectedPlaylistCount = playlist.songs.length;
+					categoryPlaylistCountElement.textContent = `Playlist (${selectedPlaylistCount})`;
+
 					const songListItems = $$('.song-list-item');
 					if (songListItems.length > 0) {
 						songListItems[0].classList.add('active-1');
 					}
 					_this.isFirstTimePlayAlbum = true;
+					$('.song-list-item.active-1').scrollIntoView({behavior: 'smooth', block: 'start'});
 				});
+
 				playlistContainer.appendChild(playlistElement);
 			});
 		}
@@ -799,6 +850,8 @@ const app = {
 					</div>
 					`;
 
+				// XỬ LÝ KHI CLICK VÀO TỪNG PHẦN TỬ ALBUM
+				let currentActiveIndex = -1;
 				albumElement.addEventListener('click', function () {
 					backPlaylistBtn.classList.add('active');
 					shuffleButton.classList.remove('active');
@@ -811,8 +864,9 @@ const app = {
 					}, []);
 
 					categorySongs.click();
+					_this.currentIndex = 0;
 
-					// Sắp xếp danh sách bài hát trong playlist theo thứ tự Alphabetic B
+					// Sắp xếp danh sách bài hát trong album theo thứ tự Alphabetic B
 					const sortedSongs = selectedAlbumSongs.slice().sort((a, b) => {
 						return a.name.localeCompare(b.name);
 					});
@@ -821,6 +875,12 @@ const app = {
 					_this.render();
 					_this.loadAlbumSong();
 					_this.currentIndex = -1;
+
+					currentActiveIndex = sortedSongs.findIndex((song) => {
+						const songName = song.name;
+						return songName === _this.currentSong?.name;
+					});
+
 					_this.songListItemClickHandle();
 
 					// CẬP NHẬT SỐ LƯỢNG BÀI HÁT TRONG ALBUM
@@ -852,7 +912,25 @@ const app = {
 			} else if (categorySongs) {
 				categorySongs.click();
 			}
+			nowPlayingSection.click();
 		};
+
+		let currentScrollTop = 0;
+
+		// Lưu lại vị trí cuộn hiện tại khi người dùng cuộn chuột
+		$('.song-list-item').addEventListener('scroll', function () {
+			currentScrollTop = this.scrollTop;
+		});
+
+		// // Lưu lại vị trí cuộn hiện tại khi nhấp vào posterMainPlayAll
+		posterMainPlayAll.addEventListener('click', function () {
+			currentScrollTop = $('.song-list-item').scrollTop;
+		});
+
+		// Khôi phục lại vị trí cuộn khi người dùng nhấp vào categorySongs
+		categorySongs.addEventListener('click', function () {
+			$('.song-list-item').scrollTop = currentScrollTop;
+		});
 
 		// XỬ LÝ KHI CLICK VÀO NOW PLAYING
 		const nowPlayingSection = $('.now-playing');
