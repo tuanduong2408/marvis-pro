@@ -48,7 +48,7 @@ body {
 .music-player-container {
 	position: relative;
 	/* height: 500px; */
-	width: 1120px;
+	width: 1200px;
 	margin: 0 auto;
 }
 
@@ -361,7 +361,7 @@ mark {
 .current-select-category-info {
 	position: relative;
 	top: 17px;
-	left: 4px;
+	left: 19px;
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
@@ -588,7 +588,7 @@ mark {
 .tabs {
 	position: relative;
 	z-index: 1;
-	padding: 0 22px 0 40px;
+	padding: 0 22px 0 65px;
 	display: flex;
 	margin: 0 auto;
 	margin-bottom: 14px;
@@ -666,7 +666,7 @@ mark {
 
 .tab-pane {
 	display: none;
-	padding: 0 22px 0 40px;
+	padding: 0 22px 0 69px;
 	overflow: auto;
 }
 
