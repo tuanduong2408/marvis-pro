@@ -896,23 +896,6 @@ const app = {
 			nowPlayingSection.click();
 		};
 
-		let currentScrollTop = 0;
-
-		// Lưu lại vị trí cuộn hiện tại khi người dùng cuộn chuột
-		$('.song-list-item').addEventListener('scroll', function () {
-			currentScrollTop = this.scrollTop;
-		});
-
-		// // Lưu lại vị trí cuộn hiện tại khi nhấp vào posterMainPlayAll
-		posterMainPlayAll.addEventListener('click', function () {
-			currentScrollTop = $('.song-list-item').scrollTop;
-		});
-
-		// Khôi phục lại vị trí cuộn khi người dùng nhấp vào categorySongs
-		categorySongs.addEventListener('click', function () {
-			$('.song-list-item').scrollTop = currentScrollTop;
-		});
-
 		// XỬ LÝ KHI CLICK VÀO NOW PLAYING
 		const nowPlayingSection = $('.now-playing');
 		nowPlayingSection.addEventListener('click', function () {
@@ -1578,12 +1561,6 @@ const app = {
 		if (currentSong) {
 			this.songs.push(currentSong);
 		}
-
-		// Đặt currentIndex về 0 để phát từ đầu danh sách xáo trộn
-		// this.currentIndex = -1;
-
-		// Cập nhật lại danh sách bài hát được hiển thị trên giao diện
-		// this.render();
 
 		// Cập nhật trạng thái icon play/pause cho bài hát đang phát
 		this.updatePlayPauseIconsForAll();
