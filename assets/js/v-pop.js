@@ -2,7 +2,7 @@ export const vPop = [
 	{
 		name: 'chuyện đôi ta',
 		singer: 'Emcee L (Da LAB), Muộii',
-		album: 'chuyện đôi ta (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/chuyen-doi-ta.mp3',
 		images: 'music/vpop/chuyen-doi-ta.jpg',
 		lyrics: 'music/vpop/chuyen-doi-ta.txt',
@@ -10,7 +10,7 @@ export const vPop = [
 	{
 		name: 'để tôi ôm em bằng giai điệu này',
 		singer: 'kai đinh, min, Grey D',
-		album: 'để tôi ôm em bằng giai điệu này (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/de-toi-om-em-bang-giai-dieu-nay.mp3',
 		images: 'music/vpop/de-toi-om-em-bang-giai-dieu-nay.jpg',
 		lyrics: 'music/vpop/de-toi-om-em-bang-giai-dieu-nay.txt',
@@ -18,7 +18,7 @@ export const vPop = [
 	{
 		name: 'ừ có anh đây',
 		singer: 'tino',
-		album: 'ừ có anh đây (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/u-co-anh-day.mp3',
 		images: 'music/vpop/u-co-anh-day.jpg',
 		lyrics: 'music/vpop/u-co-anh-day.txt',
@@ -26,7 +26,7 @@ export const vPop = [
 	{
 		name: 'mãi mãi không phải anh',
 		singer: 'Thanh Bình',
-		album: 'mãi mãi không phải anh (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/mai-mai-khong-phai-anh.mp3',
 		images: 'music/vpop/mai-mai-khong-phai-anh.jpg',
 		lyrics: 'music/vpop/mai-mai-khong-phai-anh.txt',
@@ -34,7 +34,7 @@ export const vPop = [
 	{
 		name: 'mlem iu anh',
 		singer: 'Thảo Phạm',
-		album: 'mlem iu anh (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/mlem-iu-anh.mp3',
 		images: 'music/vpop/mlem-iu-anh.jpg',
 		lyrics: 'music/vpop/mlem-iu-anh.txt',
@@ -42,7 +42,7 @@ export const vPop = [
 	{
 		name: 'kẻ điên tin vào tình yêu',
 		singer: 'Lil Z Poet',
-		album: 'kẻ điên tin vào tình yêu (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/ke-dien-tin-vao-tinh-yeu.mp3',
 		images: 'music/vpop/ke-dien-tin-vao-tinh-yeu.jpg',
 		lyrics: 'music/vpop/ke-dien-tin-vao-tinh-yeu.txt',
@@ -50,7 +50,7 @@ export const vPop = [
 	{
 		name: 'cánh đồng yêu thương',
 		singer: 'Mr Siro',
-		album: 'cánh đồng yêu thương (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/canh-dong-yeu-thuong.mp3',
 		images: 'music/vpop/canh-dong-yeu-thuong.jpg',
 		lyrics: 'music/vpop/canh-dong-yeu-thuong.txt',
@@ -58,7 +58,7 @@ export const vPop = [
 	{
 		name: 'chạm vào mưa',
 		singer: 'Bích Phương, Tùng Anh',
-		album: 'chạm vào mưa (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/cham-vao-mua.mp3',
 		images: 'music/vpop/cham-vao-mua.jpg',
 		lyrics: 'music/vpop/cham-vao-mua.txt',
@@ -66,7 +66,7 @@ export const vPop = [
 	{
 		name: 'có người',
 		singer: 'Vũ Cát Tường',
-		album: 'Có người (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/co-nguoi.mp3',
 		images: 'music/vpop/co-nguoi.jpg',
 		lyrics: 'music/vpop/co-nguoi.txt',
@@ -74,7 +74,7 @@ export const vPop = [
 	{
 		name: 'đáp án cuối cùng',
 		singer: 'Quân AP',
-		album: 'đáp án cuối cùng (single)',
+		album: 'The Best Of V-POP',
 		path: 'music/vpop/dap-an-cuoi-cung.mp3',
 		images: 'music/vpop/dap-an-cuoi-cung.jpg',
 		lyrics: 'music/vpop/dap-an-cuoi-cung.txt',
