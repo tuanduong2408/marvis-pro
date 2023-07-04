@@ -7,7 +7,7 @@ import {lilShady} from './lil-shady.js';
 import {tLong} from './tlong.js';
 import {baoAnh} from './bao-anh.js';
 import {vanMaiHuong} from './van-mai-huong.js';
-import {ladyKillah} from './ladykillah.js';
+import {rapViet} from './rap-viet.js';
 import {lyThuThao} from './ly-thu-thao.js';
 import {remix} from './remix.js';
 import {hienNgan} from './hien-ngan.js';
@@ -34,7 +34,7 @@ const iconLow = $('.icon-low');
 const iconMedium = $('.icon-medium');
 const iconHigh = $('.icon-high');
 const posterMainPlayAll = $('.poster-main-play-all');
-const allSongsFromPlaylist = ngocDieu.concat(hoangNganAnh, ngoLanHuong, lilShady, tLong, baoAnh, vanMaiHuong, ladyKillah, lyThuThao, remix, hienNgan, vPop);
+const allSongsFromPlaylist = ngocDieu.concat(hoangNganAnh, ngoLanHuong, lilShady, tLong, baoAnh, vanMaiHuong, rapViet, lyThuThao, remix, hienNgan, vPop);
 
 let songListItems = [];
 
@@ -661,7 +661,7 @@ const app = {
 			{name: 'baoAnh', songs: baoAnh},
 			{name: 'hienNgan', songs: hienNgan},
 			{name: 'hoangNganAnh', songs: hoangNganAnh},
-			{name: 'ladyKillah', songs: ladyKillah},
+			{name: 'rapViet', songs: rapViet},
 			{name: 'lilShady', songs: lilShady},
 			{name: 'lyThuThao', songs: lyThuThao},
 			{name: 'ngocDieu', songs: ngocDieu},
@@ -676,7 +676,7 @@ const app = {
 			{playlistName: 'baoAnh', customName: 'Bảo Anh'},
 			{playlistName: 'hienNgan', customName: 'Hiền Ngân Bolero'},
 			{playlistName: 'hoangNganAnh', customName: 'Hoàng Ngân Anh'},
-			{playlistName: 'ladyKillah', customName: 'LadyKillah'},
+			{playlistName: 'rapViet', customName: 'RAP VIỆT'},
 			{playlistName: 'lilShady', customName: 'Lil Shady'},
 			{playlistName: 'lyThuThao', customName: 'Lý Thu Thảo'},
 			{playlistName: 'ngocDieu', customName: 'Ngọc Diệu Bolero'},

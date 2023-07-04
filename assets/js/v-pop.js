@@ -1,5 +1,13 @@
 export const vPop = [
 	{
+		name: 'mlem iu anh',
+		singer: 'Thảo Phạm',
+		album: 'The Best Of V-POP',
+		path: 'music/vpop/mlem-iu-anh.mp3',
+		images: 'music/vpop/mlem-iu-anh.jpg',
+		lyrics: 'music/vpop/mlem-iu-anh.txt',
+	},
+	{
 		name: 'chuyện đôi ta',
 		singer: 'Emcee L (Da LAB), Muộii',
 		album: 'The Best Of V-POP',
@@ -30,14 +38,6 @@ export const vPop = [
 		path: 'music/vpop/mai-mai-khong-phai-anh.mp3',
 		images: 'music/vpop/mai-mai-khong-phai-anh.jpg',
 		lyrics: 'music/vpop/mai-mai-khong-phai-anh.txt',
-	},
-	{
-		name: 'mlem iu anh',
-		singer: 'Thảo Phạm',
-		album: 'The Best Of V-POP',
-		path: 'music/vpop/mlem-iu-anh.mp3',
-		images: 'music/vpop/mlem-iu-anh.jpg',
-		lyrics: 'music/vpop/mlem-iu-anh.txt',
 	},
 	{
 		name: 'kẻ điên tin vào tình yêu',
