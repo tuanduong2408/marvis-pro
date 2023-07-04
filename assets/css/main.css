@@ -2,7 +2,7 @@
 	--song-list-item-padding: 7px;
 	--song-list-item-height: 65px;
 	--time-of-animation: 0.9s;
-	--border-app-radius: 0px;
+	--border-app-radius: 5px;
 
 	--body-background-color: #243342;
 	--music-player-sidebar-color: #151d26;
@@ -644,7 +644,7 @@ mark {
 .tab-content::-webkit-scrollbar,
 .info-tab::-webkit-scrollbar,
 .lyrics-tab::-webkit-scrollbar {
-	width: 6px;
+	width: 7px;
 	background-color: transparent;
 }
 
@@ -1005,9 +1005,8 @@ mark {
 }
 
 .music-player-main-playlist::-webkit-scrollbar {
-	width: 6px;
+	width: 7px;
 	background-color: transparent;
-	position: relative;
 }
 
 .music-player-main-playlist::-webkit-scrollbar-thumb {
@@ -1104,7 +1103,7 @@ mark {
 }
 
 .music-player-main-album::-webkit-scrollbar {
-	width: 6px;
+	width: 7px;
 	background-color: transparent;
 }
 
