@@ -2,7 +2,7 @@ export const remix = [
 	{
 		name: 'Mật Ngọt',
 		singer: 'Dung Hoàng Phạm (Remix)',
-		album: 'Mật Ngọt (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/mat-ngot.mp3',
 		images: 'music/remix/mat-ngot.jpg',
 		albumCover: 'music/remix/mat-ngot.jpg',
@@ -11,7 +11,7 @@ export const remix = [
 	{
 		name: 'Thật Sự Không Phải Trò Đùa',
 		singer: 'CHINA (Remix)',
-		album: 'Thật Sự Không Phải Trò Đùa (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/that-su-khong-phai-tro-dua.mp3',
 		images: 'music/remix/that-su-khong-phai-tro-dua.jpg',
 		albumCover: 'music/remix/that-su-khong-phai-tro-dua.jpg',
@@ -20,7 +20,7 @@ export const remix = [
 	{
 		name: 'Mi Mi Mi x Bboom Bboom',
 		singer: 'JAPAN (Remix)',
-		album: 'Mi Mi Mi x Bboom Bboom (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/mimimi-bboom-bboom.mp3',
 		images: 'music/remix/mimimi-bboom-bboom.jpg',
 		albumCover: 'music/remix/mimimi-bboom-bboom.jpg',
@@ -29,7 +29,7 @@ export const remix = [
 	{
 		name: 'Gặp Em Đúng Lúc',
 		singer: 'Mee Music (Remix)',
-		album: 'Gặp Em Đúng Lúc (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/gap-em-dung-luc.mp3',
 		images: 'music/remix/gap-em-dung-luc.jpg',
 		albumCover: 'music/remix/gap-em-dung-luc.jpg',
@@ -38,7 +38,7 @@ export const remix = [
 	{
 		name: 'The Hills x Where Have You Been',
 		singer: 'Thereon (Remix)',
-		album: 'The Hills x Where Have You Been (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/the-hills-x-where-have-you-been.mp3',
 		images: 'music/remix/the-hills-x-where-have-you-been.jpg',
 		albumCover: 'music/remix/the-hills-x-where-have-you-been.jpg',
@@ -47,7 +47,7 @@ export const remix = [
 	{
 		name: 'Lạc Trôi',
 		singer: 'Sơn Tùng MTP (Remix)',
-		album: 'Lạc Trôi (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/lac-troi.mp3',
 		images: 'music/remix/lac-troi.jpg',
 		albumCover: 'music/remix/lac-troi.jpg',
@@ -56,7 +56,7 @@ export const remix = [
 	{
 		name: 'Sang Xịn Mịn + Buông Hàng',
 		singer: 'Young Milo, TvT (Remix)',
-		album: 'Sang Xịn Mịn + Buông Hàng (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/sang-xin-min-ft-buong-hang.mp3',
 		images: 'music/remix/sang-xin-min-ft-buong-hang.jpg',
 		albumCover: 'music/remix/sang-xin-min-ft-buong-hang.jpg',
@@ -65,7 +65,7 @@ export const remix = [
 	{
 		name: 'Heroes Tonight',
 		singer: 'Trí Thức (Remix)',
-		album: 'Heroes Tonight (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/heroes-tonight-tri-thuc-remix.mp3',
 		images: 'music/remix/heroes-tonight-tri-thuc-remix.jpg',
 		albumCover: 'music/remix/heroes-tonight-tri-thuc-remix.jpg',
@@ -74,7 +74,7 @@ export const remix = [
 	{
 		name: 'Đùa Hơi Quá',
 		singer: 'Lê Bảo Bình, Ness Remix Ver 2',
-		album: 'Đùa Hơi Quá (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/dua-hoi-qua.mp3',
 		images: 'music/remix/dua-hoi-qua.jpg',
 		albumCover: 'music/remix/dua-hoi-qua.jpg',
@@ -83,7 +83,7 @@ export const remix = [
 	{
 		name: '100 Years Love',
 		singer: 'AnhVu (Remix)',
-		album: '100 Years Love (Remix) (Single)',
+		album: 'Remix Vinahouse',
 		path: 'music/remix/100-years-love.mp3',
 		images: 'music/remix/100-years-love.jpg',
 		albumCover: 'music/remix/100-years-love.jpg',
