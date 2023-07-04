@@ -1266,11 +1266,11 @@ const app = {
 				hasSearched = false;
 				searchInput.value = '';
 				searchInput.placeholder = 'Song not found...';
-				searchInfo.innerText = "The song doesn't exist !!";
+				// searchInfo.innerText = "The song doesn't exist !!";
 				searchInfo.style.width = '75%';
 			} else {
 				searchInput.placeholder = 'Search...';
-				searchInfo.innerText = 'Enter to Search and Play Song';
+				// searchInfo.innerText = 'Enter to Search and Play Song';
 				searchInfo.style.width = '100%';
 			}
 		}
