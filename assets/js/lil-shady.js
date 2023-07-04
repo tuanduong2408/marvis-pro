@@ -89,22 +89,4 @@ export const lilShady = [
 		albumCover: 'music/lil-shady/lil-shady-thumbnail.jpg',
 		lyrics: '',
 	},
-	{
-		name: 'anh em chân chính',
-		singer: 'Lil Shady',
-		album: 'The Best Of Lil Shady',
-		path: 'music/lil-shady/anh-em-chan-chinh.mp3',
-		images: 'music/lil-shady/lil-shady.jpg',
-		albumCover: 'music/lil-shady/lil-shady-thumbnail.jpg',
-		lyrics: '',
-	},
-	{
-		name: 'giấc mơ tuổi thơ',
-		singer: 'Lil Shady',
-		album: 'The Best Of Lil Shady',
-		path: 'music/lil-shady/giac-mo-tuoi-tho.mp3',
-		images: 'music/lil-shady/lil-shady.jpg',
-		albumCover: 'music/lil-shady/lil-shady-thumbnail.jpg',
-		lyrics: '',
-	},
 ];

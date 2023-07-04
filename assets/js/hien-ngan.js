@@ -1,5 +1,23 @@
 export const hienNgan = [
 	{
+		name: 'nỗi buồn gác trọ',
+		singer: 'Hiền Ngân',
+		album: 'The Best Of Hiền Ngân',
+		path: 'music/hien-ngan/noi-buon-gac-tro.mp3',
+		images: 'music/hien-ngan/hien-ngan.jpg',
+		albumCover: 'music/hien-ngan/hien-ngan.jpg',
+		lyrics: 'music/hien-ngan/noi-buon-gac-tro.txt',
+	},
+	{
+		name: 'khu phố ngày xưa',
+		singer: 'Hiền Ngân',
+		album: 'The Best Of Hiền Ngân',
+		path: 'music/hien-ngan/khu-pho-ngay-xua.mp3',
+		images: 'music/hien-ngan/hien-ngan.jpg',
+		albumCover: 'music/hien-ngan/hien-ngan.jpg',
+		lyrics: 'music/hien-ngan/khu-pho-ngay-xua.txt',
+	},
+	{
 		name: 'tuổi mộng xứ đông',
 		singer: 'Hiền Ngân',
 		album: 'The Best Of Hiền Ngân',

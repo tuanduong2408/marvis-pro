@@ -1,59 +1,59 @@
 :root {
-  --body-background-color: #4f3659;
-  --music-player-sidebar-color: #231b2e;
-  --music-player-main-color: #170f23;
-  --music-player-color: #170f23;
-  --media-player-main-color: #9b4de0;
-  --song-list-item-active-color: #42385286;
-  --song-list-item-active-1-color: #2922348c;
-  --song-list-item-color: #4D5768;
-  --song-list-item-hover-color: #E4E9F0;
-  --shuffle-repeat-info-bg-color: #33475B;
+	--body-background-color: #4f3659;
+	--music-player-sidebar-color: #231b2e;
+	--music-player-main-color: #170f23;
+	--music-player-color: #170f23;
+	--media-player-main-color: #9b4de0;
+	--song-list-item-active-color: #42385286;
+	--song-list-item-active-1-color: #2922348c;
+	--song-list-item-color: #4d5768;
+	--song-list-item-hover-color: #e4e9f0;
+	--shuffle-repeat-info-bg-color: #33475b;
 }
 
 body {
-  background-color: var(--body-background-color);
+	background-color: var(--body-background-color);
 }
 
 .music-player-sidebar {
-  background-color: var(--music-player-sidebar-color);
+	background-color: var(--music-player-sidebar-color);
 }
 
 .music-player-main {
-  background-color: var(--music-player-main-color);
+	background-color: var(--music-player-main-color);
 }
 
 .music-player {
-  background-color: var(--music-player-color);
+	background-color: var(--music-player-color);
 }
 
 .media-player-main {
-  background-color: var(--media-player-main-color);
+	background-color: var(--media-player-main-color);
 }
 
 .song-list-item.active {
-  background-color: var(--song-list-item-active-color) !important;
+	background-color: var(--song-list-item-active-color) !important;
 }
 
 .song-list-item.active.active-1 {
-  background-color: var(--song-list-item-active-color) !important;
+	background-color: var(--song-list-item-active-color) !important;
 }
 
 .song-list-item.active-1 {
-  background-color: var(--song-list-item-active-1-color) !important;
+	background-color: var(--song-list-item-active-1-color) !important;
 }
 
 .song-list-item {
-  color: var(--song-list-item-color);
+	color: var(--song-list-item-color);
 }
 
 .song-list-item:hover {
-  background-color: var(--song-list-item-hover-color);
+	background-color: var(--song-list-item-hover-color);
 }
 
 .shuffle-button .shuffle-info,
 .repeat-button .repeat-info {
-  background-color: var(--shuffle-repeat-info-bg-color);
+	background-color: var(--shuffle-repeat-info-bg-color);
 }
 
 .poster-main-play-all:hover {
@@ -61,5 +61,5 @@ body {
 }
 
 .song-list-item .song-info {
-  color: #fff;
+	color: #fff;
 }

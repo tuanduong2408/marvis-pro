@@ -746,7 +746,6 @@ const app = {
 					});
 					_this.currentIndex = currentActiveIndex;
 
-
 					_this.songListItemClickHandle();
 					backPlaylistBtn.classList.add('active');
 					selectedPlaylistCount = playlist.songs.length;
