@@ -740,7 +740,7 @@ mark {
 	width: 100%;
 	height: 400px;
 	overflow-y: overlay;
-	height: 100%;
+	height: 82%;
 	position: relative;
 	top: 50%;
 	transform: translateY(-54%);
