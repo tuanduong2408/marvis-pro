@@ -726,8 +726,14 @@ mark {
 	transform: translate(-48%, -50%);
 }
 
-.info-tab p {
+.info-tab p,
+.info-tab h2 {
+	text-align: left;
+}
+
+.info-tab .creInfo {
 	text-align: center;
+	font-size: 18px;
 }
 
 .info-tab {
